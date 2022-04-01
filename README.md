@@ -1,5 +1,4 @@
 # Automated Testing with MSTest V2
-https://github.com/TomiSar/MSTestAutomatedTesting.git
 
 ## 1. Course Overview
 * Mstest V2 Automated Testing
