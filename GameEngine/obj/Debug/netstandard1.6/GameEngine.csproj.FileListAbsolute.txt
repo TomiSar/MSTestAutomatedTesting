@@ -1,0 +1,9 @@
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\bin\Debug\netstandard1.6\GameEngine.deps.json
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\bin\Debug\netstandard1.6\GameEngine.dll
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\bin\Debug\netstandard1.6\GameEngine.pdb
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\obj\Debug\netstandard1.6\GameEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\obj\Debug\netstandard1.6\GameEngine.AssemblyInfoInputs.cache
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\obj\Debug\netstandard1.6\GameEngine.AssemblyInfo.cs
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\obj\Debug\netstandard1.6\GameEngine.csproj.CoreCompileInputs.cache
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\obj\Debug\netstandard1.6\GameEngine.dll
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine\obj\Debug\netstandard1.6\GameEngine.pdb

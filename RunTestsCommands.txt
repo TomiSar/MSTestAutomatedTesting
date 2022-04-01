@@ -1,0 +1,30 @@
+Running test with Developer command prompt
+https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-test?tabs=netcore2x
+* Run dotnet commands in TestProject folder:
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine.Tests>
+
+* Run all tests *
+dotnet test
+
+* Using Loggers for more information *
+- Log verbose information (verbosity=quiet,minimal,normal,detailed)
+dotnet test --logger "console;verbosity=detailed"
+
+* Run tests based on attributes (TestCategory, Priority) *
+dotnet test --logger "console;verbosity=detailed" --filter "TestCategory=Player"
+dotnet test --logger "console;verbosity=detailed" --filter "Category=Boss | Category=Enemy"
+dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --logger "console;verbosity=detailed" --filter "Priority=1"
+
+- Log to a .trx file
+dotnet test --filter Category=Boss --logger:trx
+
+- Log to a .html file
+dotnet test --logger "html"
+
+* Run a specific test *
+//by name
+dotnet test --logger "console;verbosity=detailed" --filter "Name="
+dotnet test --logger "console;verbosity=detailed" --filter "(Name=) | (Name=)"
+
+//starts with
+dotnet test --logger "console;verbosity=detailed" --filter Name~FileName
