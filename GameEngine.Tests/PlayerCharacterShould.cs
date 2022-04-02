@@ -6,7 +6,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GameEngine.Tests
 {
-	[TestClass, TestCategory("Player")]
+	[TestClass]
+	[TestCategory("Player")]
 	public class PlayerCharacterShould
 	{
 		private readonly PlayerCharacter _sut;
@@ -17,6 +18,8 @@ namespace GameEngine.Tests
 		}
 
 		[TestMethod]
+		[TestCategory("PlayerDefaults")]
+		//[Ignore]
 		public void BeInexperiencedWhenNew()
 		{
 			// Assert
@@ -102,6 +105,8 @@ namespace GameEngine.Tests
 		}
 
 		[TestMethod]
+		[TestCategory("PlayerDefaults")]
+		//[Ignore]
 		public void NotHaveNicknameByDefault()
 		{
 			// Assert
@@ -109,6 +114,8 @@ namespace GameEngine.Tests
 		}
 
 		[TestMethod]
+		[TestCategory("PlayerDefaults")]
+		//[Ignore]
 		public void StartsWithDefaultHealth()
 		{
 			// Assert
@@ -116,6 +123,8 @@ namespace GameEngine.Tests
 		}
 
 		[TestMethod]
+		[TestCategory("PlayerDefaults")]
+		//[Ignore]
 		public void StartsWithDefaultHealth_NotEqual()
 		{
 			// Assert
@@ -123,6 +132,7 @@ namespace GameEngine.Tests
 		}
 
 		[TestMethod]
+		[TestCategory("PlayerHealth")]
 		public void IncreaseHealthAfterSleeping()
 		{
 			// Act
@@ -134,6 +144,7 @@ namespace GameEngine.Tests
 		}
 
 		[TestMethod]
+		[TestCategory("PlayerHealth")]
 		public void TakeDamage()
 		{
 			// Act
@@ -145,6 +156,7 @@ namespace GameEngine.Tests
 		}
 
 		[TestMethod]
+		[TestCategory("PlayerHealth")]
 		public void TakeDamage_NotEqual()
 		{
 			// Act

@@ -10,15 +10,16 @@ dotnet test
 - Log verbose information (verbosity=quiet,minimal,normal,detailed)
 dotnet test --logger "console;verbosity=detailed"
 
-* Run tests based on attributes (TestCategory, Priority) *
-dotnet test --logger "console;verbosity=detailed" --filter "TestCategory=Player"
-dotnet test --logger "console;verbosity=detailed" --filter "Category=Boss | Category=Enemy"
-dotnet test MyClassesTest.csproj --settings MyClasses.runsettings --logger "console;verbosity=detailed" --filter "Priority=1"
+* Run tests based on attributes (TestCategory, Priority, ClassName) *
+dotnet test --filter "ClassName=GameEngine.Tests.EnemyFactoryShould" 
+dotnet test --filter "TestCategory=EnemyCreation" -v n
+dotnet test --filter "TestCategory=Player" -v n
+dotnet test --filter "TestCategory=Boss | Category=Enemy"
+dotnet test --filter "ClassName=GameEngine.Tests.PlayerCharacterShould" -v n
+dotnet test --filter "ClassName=GameEngine.Tests.Lifecycle" -v n
 
-- Log to a .trx file
-dotnet test --filter Category=Boss --logger:trx
-
-- Log to a .html file
+- Log into files: .trx and .html file
+dotnet test --filter TestCategory=Boss --logger:trx
 dotnet test --logger "html"
 
 * Run a specific test *

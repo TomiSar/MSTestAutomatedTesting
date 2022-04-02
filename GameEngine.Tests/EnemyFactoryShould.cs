@@ -1,9 +1,10 @@
-﻿using System; 
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GameEngine.Tests
 {
 	[TestClass]
+	[TestCategory("EnemyCreation")]
 	public class EnemyFactoryShould
 	{
 		private readonly EnemyFactory _sut;
@@ -15,6 +16,9 @@ namespace GameEngine.Tests
 		[TestMethod]
 		public void NotAllowedNullName()
 		{
+			Console.WriteLine("Creating EnemyFactory");
+			Console.WriteLine("Calling Create method");
+			
 			// Assert
 			Assert.ThrowsException<ArgumentNullException>(()  => _sut.Create(null));
 		}

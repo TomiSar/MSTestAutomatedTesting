@@ -1,4 +1,4 @@
-# Automated Testing with MSTest V2
+# Automated Testing with MSTest V2git 
 
 ## 1. Course Overview
 * Mstest V2 Automated Testing
