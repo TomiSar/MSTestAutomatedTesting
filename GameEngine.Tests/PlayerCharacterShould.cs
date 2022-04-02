@@ -1,6 +1,5 @@
-using System;
 using System.Linq;
-using System.Diagnostics;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -143,16 +142,56 @@ namespace GameEngine.Tests
 			Assert.AreEqual(99, _sut.Health, 100);
 		}
 
-		[TestMethod]
+		// Testdata damages
+		public static IEnumerable<object[]> Damages
+		{
+			get
+			{
+				return new List<object[]>
+				{
+					new object[] { 1, 99 },
+					new object[] { 0, 100 },
+					new object[] { 25, 75 },
+					new object[] { 50, 50 },
+					new object[] { 75, 25 },
+					new object[] { 100, 1 },
+				};
+			}
+		}
+
+		public static IEnumerable<object[]> GetDamages()
+		{
+			return new List<object[]>
+			{
+				new object[] { 1, 99 },
+				new object[] { 0, 100 },
+				new object[] { 25, 75 },
+				new object[] { 50, 50 },
+				new object[] { 100, 1 },
+				new object[] { 101, 1 },
+				new object[] { 10, 90 },
+			};
+		}
+
+		[DataTestMethod]
+		//[DynamicData(nameof(Damages))]
+		//[DynamicData(nameof(GetDamages), DynamicDataSourceType.Method)]
+		//[DynamicData(nameof(DamageData.GetDamages), typeof(DamageData), DynamicDataSourceType.Method)]
+		[DynamicData(nameof(ExternalHealthDamageTestData.Testdata), typeof(ExternalHealthDamageTestData))]
+		//[DataRow(0, 100)]
+		//[DataRow(1, 99)]
+		//[DataRow(25, 75)]
+		//[DataRow(50, 50)]
+		//[DataRow(100, 1)]
+		//[DataRow(101, 1)]
 		[TestCategory("PlayerHealth")]
-		public void TakeDamage()
+		public void TakeDamage(int damage, int expectedHealth)
 		{
 			// Act
-			int damage = 5;
 			_sut.TakeDamage(damage);
 
 			// Assert
-			Assert.AreEqual(100 - damage, _sut.Health);
+			Assert.AreEqual(expectedHealth, _sut.Health);
 		}
 
 		[TestMethod]

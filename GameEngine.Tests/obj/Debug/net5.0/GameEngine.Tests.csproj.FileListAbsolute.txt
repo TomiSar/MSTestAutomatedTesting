@@ -100,3 +100,4 @@ C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine.Tests\obj\Debug\net5.0\G
 C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine.Tests\obj\Debug\net5.0\ref\GameEngine.Tests.dll
 C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine.Tests\obj\Debug\net5.0\GameEngine.Tests.pdb
 C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine.Tests\obj\Debug\net5.0\GameEngine.Tests.genruntimeconfig.cache
+C:\Users\TS\CodeRepos\MSTestAutomatedTesting\GameEngine.Tests\bin\Debug\net5.0\Damage.csv
